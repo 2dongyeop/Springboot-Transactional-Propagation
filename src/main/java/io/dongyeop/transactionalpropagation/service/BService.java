@@ -13,7 +13,7 @@ public class BService {
 
     private final MemberRepository memberRepository;
 
-    @Transactional(propagation = Propagation.REQUIRES_NEW)
+    @Transactional(propagation = Propagation.MANDATORY)
     public void save() {
         memberRepository.save(new Member(2L));
     }

@@ -13,12 +13,10 @@ public class AService {
     private final MemberRepository memberRepository;
     private final BService bService;
 
-    @Transactional
+//    @Transactional
     public void save() {
         memberRepository.save(new Member(1L));
         bService.save();
         memberRepository.save(new Member(3L));
-
-        throw new RuntimeException();
     }
 }
