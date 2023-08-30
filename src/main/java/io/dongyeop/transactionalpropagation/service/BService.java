@@ -16,6 +16,5 @@ public class BService {
     @Transactional(propagation = Propagation.REQUIRES_NEW)
     public void save() {
         memberRepository.save(new Member(2L));
-        throw new RuntimeException();
     }
 }

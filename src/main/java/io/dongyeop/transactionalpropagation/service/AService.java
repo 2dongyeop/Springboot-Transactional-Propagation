@@ -15,12 +15,10 @@ public class AService {
 
     @Transactional
     public void save() {
-        try {
-            memberRepository.save(new Member(1L));
-            bService.save();
-            memberRepository.save(new Member(3L));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        memberRepository.save(new Member(1L));
+        bService.save();
+        memberRepository.save(new Member(3L));
+
+        throw new RuntimeException();
     }
 }
